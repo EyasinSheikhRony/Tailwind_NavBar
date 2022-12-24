@@ -1,0 +1,51 @@
+<!Doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Tailwind Css</title>
+</head>
+<body class="bg-cyan-500">
+  <div class="">
+    <nav class="p-4 bg-white shadow-md md:flex md:items-center md:justify-around justify-between">
+      <div class="flex justify-between items-center">
+        <span class="text-gray-500 font-bold text-2xl font[Poppins]">Tailwind</span>
+        <span class="text-3xl cursor-pointer md:hidden block">
+          <ion-icon name="menu" onclick="menu(this)"></ion-icon>
+        </span>
+      </div>
+
+      <ul class="md:flex md:items-center z-[-1] md:z-auto md:static absolute bg-white w-full left-0  md:w-auto md:py-0 py-4 md:pl-0 pl-6 opacity-0 md:opacity-100 top-[-400px] transition-all ease-in-out duration-1000 ">
+        <li class="mx-4 my-4 md:my-0">
+          <a href="#" class="hover:text-sky-600 text-sky-500 text-xl font[Poppins]">Home</a>
+        </li>
+        <li class="mx-4 my-4 md:my-0">
+          <a href="#" class="hover:text-sky-600 text-sky-500 text-xl font[Poppins]">Address</a>
+        </li>
+        <li class="mx-4 my-4 md:my-0">
+          <a href="#" class="hover:text-sky-600 text-sky-500 text-xl font[Poppins]">Profile</a>
+        </li>
+        <li class="mx-4 my-4 md:my-0">
+          <a href="#" class="hover:text-sky-600 text-sky-500 text-xl font[Poppins]">Contact</a>
+        </li>
+        <p class="mt-4 md:mt-0">
+          <a href="#" class="font-semibold text-xl font[Poppins] bg-gradient-to-r from-indigo-500 to-pink-500 hover:bg-gradient-to-r hover:from-pink-400 hover:to-orange-400 text-white py-1 px-5 rounded-2xl ml-0 md:ml-10">Get Start</a>
+        </p>
+      </ul>
+    </nav>
+  </div>
+
+  <!-- script  -->
+  <script>
+    function menu(e) {
+      let list = document.querySelector('ul');
+      
+      e.name === 'menu' ? (e.name = 'close', list.classList.add('top-[65px]'), list.classList.add('opacity-100')) : (e.name = 'menu', list.classList.remove('top-[65px]'), list.classList.remove('opacity-100'))
+    }
+    
+  </script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
